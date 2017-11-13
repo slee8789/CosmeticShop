@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09BB4CE2678B5E2802E2B41F /* Pods_CosmeticShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCDF5682221DF6CBDDCA751 /* Pods_CosmeticShop.framework */; };
 		B25EC66A1FAE077100545783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25EC6691FAE077100545783 /* AppDelegate.swift */; };
 		B25EC66C1FAE077100545783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25EC66B1FAE077100545783 /* ViewController.swift */; };
 		B25EC66F1FAE077100545783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25EC66D1FAE077100545783 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		329EEA5398ECE6842F5C2472 /* Pods-CosmeticShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeticShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmeticShop/Pods-CosmeticShop.debug.xcconfig"; sourceTree = "<group>"; };
+		A1A5380666F9E8984D84B84B /* Pods-CosmeticShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmeticShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmeticShop/Pods-CosmeticShop.release.xcconfig"; sourceTree = "<group>"; };
+		ABCDF5682221DF6CBDDCA751 /* Pods_CosmeticShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmeticShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25EC6661FAE077100545783 /* CosmeticShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmeticShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25EC6691FAE077100545783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B25EC66B1FAE077100545783 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BB4CE2678B5E2802E2B41F /* Pods_CosmeticShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A6E73337A577E189AE48FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABCDF5682221DF6CBDDCA751 /* Pods_CosmeticShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9872854CD408C228C9FA3AB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				329EEA5398ECE6842F5C2472 /* Pods-CosmeticShop.debug.xcconfig */,
+				A1A5380666F9E8984D84B84B /* Pods-CosmeticShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B25EC65D1FAE077100545783 = {
 			isa = PBXGroup;
 			children = (
 				B25EC6681FAE077100545783 /* CosmeticShop */,
 				B25EC6671FAE077100545783 /* Products */,
+				9872854CD408C228C9FA3AB6 /* Pods */,
+				23A6E73337A577E189AE48FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B25EC6781FAE077100545783 /* Build configuration list for PBXNativeTarget "CosmeticShop" */;
 			buildPhases = (
+				936E53967254A832E0BBC081 /* [CP] Check Pods Manifest.lock */,
 				B25EC6621FAE077100545783 /* Sources */,
 				B25EC6631FAE077100545783 /* Frameworks */,
 				B25EC6641FAE077100545783 /* Resources */,
+				20DA7C27B73966AEA128FCC2 /* [CP] Embed Pods Frameworks */,
+				852F6CD32625FDB87099DE97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20DA7C27B73966AEA128FCC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CosmeticShop/Pods-CosmeticShop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmeticShop/Pods-CosmeticShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		852F6CD32625FDB87099DE97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmeticShop/Pods-CosmeticShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		936E53967254A832E0BBC081 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CosmeticShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B25EC6621FAE077100545783 /* Sources */ = {
@@ -272,9 +355,11 @@
 		};
 		B25EC6791FAE077100545783 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329EEA5398ECE6842F5C2472 /* Pods-CosmeticShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JV6348VXVQ;
 				INFOPLIST_FILE = CosmeticShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leesc.CosmeticShop;
@@ -286,9 +371,11 @@
 		};
 		B25EC67A1FAE077100545783 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A5380666F9E8984D84B84B /* Pods-CosmeticShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JV6348VXVQ;
 				INFOPLIST_FILE = CosmeticShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leesc.CosmeticShop;
